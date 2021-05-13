@@ -1,0 +1,39 @@
+// Hide breakpoint helpers
+
+.hide-sm {
+  @include bp($sm) {
+    display: none;
+  }
+}
+
+.hide-md {
+  @include bp($md) {
+    display: none;
+  }
+}
+
+.hide-lg {
+  @include bp($lg) {
+    display: none;
+  }
+}
+
+// Show breakpoint helpers
+
+.show-sm {
+  @include bp-max($sm) {
+    display: none;
+  }
+}
+
+.show-md {
+  @include bp-max($md) {
+    display: none;
+  }
+}
+
+.show-lg {
+  @include bp-max($lg) {
+    display: none;
+  }
+}

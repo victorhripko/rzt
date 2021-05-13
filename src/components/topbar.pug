@@ -1,0 +1,15 @@
+include ../mixins/icon
+
+header.topbar
+  .topbar__container
+    button.topbar__btn.topbar__btn--burger(type="button" aria-label="burger button")
+      span.indicator.burger-hide
+        +icon('burger').topbar__btn-icon.topbar__btn-icon--burger
+      span.burger-content 
+        img.burger-logo(src="assets/logo.svg")
+    .topbar__middle
+      button.topbar__btn(type="button" aria-label="notification button")
+        +icon('notification').topbar__btn-icon
+    button.topbar__btn.topbar__btn--user(type="button" aria-label="user button")
+      +icon('user').topbar__btn-icon
+      span.topbar__btn-user-name Мистер Фокс

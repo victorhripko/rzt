@@ -1,0 +1,68 @@
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-family: $base-font;
+  background-color: white;
+  color: #333;
+
+  // @supports (-webkit-touch-callout: none) {
+  //   min-height: -webkit-fill-available;
+  // }
+}
+
+.app {
+  height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+
+.content {
+  flex-grow: 1;
+  min-width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+
+  @include bp($lg) {
+    min-width: auto;
+  }
+}
+
+.content__item {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.content__item--open {
+  @include bp-max($lg) {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(black, 0.5);
+      z-index: 100;
+    }
+  }
+}

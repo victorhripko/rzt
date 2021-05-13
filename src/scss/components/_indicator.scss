@@ -1,0 +1,15 @@
+.indicator {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -0.2rem;
+    right: -0.2rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: #ffa900;
+    box-shadow: 0 0 0 0.2rem var(--indicator-bg, white);
+  }
+}

@@ -1,0 +1,47 @@
+include ../mixins/icon
+
+aside.sidebar
+  h3.sidebar__title WELLSHINA
+  .sidebar__nav
+    .sidebar__nav-item 
+      button.sidebar__nav-button(type="button")
+        span.sidebar__nav-button-icon
+          +icon('aside/dashboard')
+        | Панель управления
+    .sidebar__nav-item 
+      button.sidebar__nav-button.sidebar__nav-button--sublist(type="button")
+        span.sidebar__nav-button-icon
+          +icon('aside/goods')
+        | Товары
+      .sidebar__nav-sublist Товары
+    .sidebar__nav-item 
+      button.sidebar__nav-button.sidebar__nav-button--sublist(type="button")
+        span.sidebar__nav-button-icon
+          +icon('aside/orders')
+        | Заказы
+      .sidebar__nav-sublist Заказы
+    .sidebar__nav-item 
+      button.sidebar__nav-button.sidebar__nav-button--sublist(type="button")
+        span.sidebar__nav-button-icon
+          +icon('aside/finances')
+        | Финансы
+        span.sidebar__nav-button-badge 456 грн
+      .sidebar__nav-sublist Финансы
+    .sidebar__nav-item 
+      button.sidebar__nav-button.sidebar__nav-button--sublist(type="button")
+        span.sidebar__nav-button-icon
+          +icon('aside/clients')
+        | Клиенты
+      .sidebar__nav-sublist Клиенты
+    .sidebar__nav-item 
+      button.sidebar__nav-button.sidebar__nav-button--sublist(type="button")
+        span.sidebar__nav-button-icon
+          +icon('aside/ads')
+        | Реклама
+      .sidebar__nav-sublist Реклама
+    .sidebar__nav-item 
+      button.sidebar__nav-button.sidebar__nav-button--sublist(type="button")
+        span.sidebar__nav-button-icon
+          +icon('aside/settings')
+        | Настройки
+      .sidebar__nav-sublist Настройки

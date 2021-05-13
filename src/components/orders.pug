@@ -1,0 +1,139 @@
+include ../mixins/icon
+
+.content__item.orders
+  .orders__header
+    .orders__header-row
+      h1.orders__title Заказы
+
+      form.show-sm
+        label.form-textfield.orders__input
+          span.form-textfield__icon
+            +icon('search')
+          input.form-textfield__input(type="number" placeholder="Номер заказа")
+
+      p.orders__search-result.show-sm
+        | Найдено 
+        b 25 заказов 
+        | по фильтру
+
+      button.btn-outline.btn-outline--green.orders__excel-btn.show-md(type="button")
+        span.btn-outline__icon
+          +icon('excel')
+        | Экспорт
+
+    .action-btn-list.action-btn-list--orders.show-md
+      .action-btn-list__item
+        button.action-btn(type="button")
+          span.action-btn__icon.indicator
+            +icon('time')
+          | Статус
+      .action-btn-list__item
+        button.action-btn(type="button")
+          span.action-btn__icon
+            +icon('shipping')
+          | Доставка и оплата
+      .action-btn-list__item
+        button.action-btn(type="button")
+          span.action-btn__icon
+            +icon('date')
+          | Дата
+      .action-btn-list__item
+        button.action-btn(type="button")
+          span.action-btn__icon
+            +icon('person')
+          | Покупатель
+      .action-btn-list__item
+        button.action-btn(type="button")
+          span.action-btn__icon
+            +icon('money')
+          | Сумма
+      .action-btn-list__item
+        button.action-btn(type="button")
+          span.action-btn__icon.indicator
+            +icon('goods')
+          | Товар
+
+    .order-filter-list.order-filter-list--md.show-md
+      .order-filter-list__item
+        button.rounded-btn.rounded-btn--green(type="button") Сбросить
+      .order-filter-list__item
+        button.badge(type="button")
+          | Новый заказ
+
+    .action-btn-list.action-btn-list--orders.show-sm.hide-md
+      .action-btn-list__item
+        button.action-btn(type="button")
+          span.action-btn__icon.indicator
+            +icon('filter')
+          | Фильтр
+      .action-btn-list__item
+        .order-filter-list
+          .order-filter-list__item
+            button.rounded-btn.rounded-btn--green(type="button") Сбросить
+          .order-filter-list__item
+            button.badge(type="button")
+              | Новый заказ
+
+    .action-btn-list.action-btn-list--orders.hide-sm
+      .action-btn-list__item
+        button.action-btn(type="button")
+          span.action-btn__icon
+            +icon('search')
+          | Поиск
+      .action-btn-list__item
+        button.action-btn(type="button")
+          span.action-btn__icon
+            +icon('filter')
+          | Фильтр
+      .action-btn-list__item
+        button.action-btn(type="button")
+          span.action-btn__icon
+            +icon('sort')
+          | Сортировка
+
+    p.orders__search-result.hide-sm
+      | Найдено 
+      b 25 заказов 
+      | по фильтру
+
+  .orders__body
+    .orders__table
+      .orders__table-head
+
+        .orders__table-head-col
+          .orders__table-head-item Заказ
+        .orders__table-head-col
+          button.orders__table-head-item.orders__table-head-item--button.inc(type="button") Дата
+        .orders__table-head-col
+          button.orders__table-head-item.orders__table-head-item--button(type="button") Сумма
+        .orders__table-head-col
+          button.orders__table-head-item.orders__table-head-item--button(type="button") Товары
+    
+      each val in [1, 2, 3, 4]
+        .orders__table-row
+          .orders__table-general
+            .orders__table-general-info
+              span.orders__table-number 110086382
+              +icon('card').orders__table-card
+              +icon('meest-express').orders__table-delivery
+              .indicator.orders__table-chat
+                +icon('chat').orders__table-chat-icon
+            p.orders__table-info-text
+              | Данные подтверждены. Ожидает отправки
+          .orders__table-date
+            time 13:20
+            time(datetime="2018-07-20") 20/07/18
+          .orders__table-price
+            span.orders__table-price-value 4 000 000 грн
+            span.orders__table-price-old-value 5 000 000 грн
+          .orders__table-product
+            .orders__table-product-items
+              .orders__table-product__item
+              .orders__table-product__item
+              .orders__table-product__item
+              .orders__table-product__item
+            .orders__table-products
+              span.orders__table-products-count 
+                span.show-lg +
+                | 2
+              span.orders__table-products-text товара
